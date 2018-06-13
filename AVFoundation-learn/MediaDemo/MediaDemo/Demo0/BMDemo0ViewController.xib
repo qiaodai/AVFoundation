@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BMDemo0ViewController">
+            <connections>
+                <outlet property="overlayView" destination="cfC-k0-9TT" id="yKX-UE-R8d"/>
+                <outlet property="preView" destination="q9Y-lC-OQY" id="sHu-ak-7BR"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q9Y-lC-OQY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <viewLayoutGuide key="safeArea" id="r4g-bj-Pfj"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cfC-k0-9TT">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ag5-qe-dN7">
+                            <rect key="frame" x="8" y="44" width="60" height="39"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="FNB-Ci-gkK"/>
+                                <constraint firstAttribute="height" constant="39" id="YAQ-Fb-UQp"/>
+                            </constraints>
+                            <state key="normal" title="闪光灯"/>
+                            <connections>
+                                <action selector="flashPowerButtonAction:" destination="-1" eventType="touchUpInside" id="X6d-ei-Q3H"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B13-bO-eaq">
+                            <rect key="frame" x="301" y="46" width="59" height="35"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="59" id="1yq-5g-02c"/>
+                                <constraint firstAttribute="height" constant="35" id="Ru4-If-nlB"/>
+                            </constraints>
+                            <state key="normal" title="摄像头"/>
+                            <connections>
+                                <action selector="cameraButtonAction:" destination="-1" eventType="touchUpInside" id="qOY-fa-3eW"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzN-3a-iLO">
+                            <rect key="frame" x="161" y="621" width="52" height="38"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="52" id="NWq-Dz-e0P"/>
+                                <constraint firstAttribute="height" constant="38" id="UCo-7L-QiC"/>
+                            </constraints>
+                            <state key="normal" title="    拍摄  "/>
+                            <connections>
+                                <action selector="takeCamera:" destination="-1" eventType="touchUpInside" id="m0e-ie-gnF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="nzN-3a-iLO" firstAttribute="centerX" secondItem="cfC-k0-9TT" secondAttribute="centerX" id="IJY-Px-GVm"/>
+                        <constraint firstItem="ag5-qe-dN7" firstAttribute="leading" secondItem="oFp-ce-Ina" secondAttribute="leading" constant="8" id="M9B-Ck-l3M"/>
+                        <constraint firstItem="oFp-ce-Ina" firstAttribute="bottom" secondItem="nzN-3a-iLO" secondAttribute="bottom" constant="8" id="Oaw-Cj-2O3"/>
+                        <constraint firstItem="B13-bO-eaq" firstAttribute="top" secondItem="oFp-ce-Ina" secondAttribute="top" constant="26" id="Qz3-v0-otb"/>
+                        <constraint firstItem="ag5-qe-dN7" firstAttribute="top" secondItem="oFp-ce-Ina" secondAttribute="top" constant="24" id="xd4-ZZ-itA"/>
+                        <constraint firstItem="oFp-ce-Ina" firstAttribute="trailing" secondItem="B13-bO-eaq" secondAttribute="trailing" constant="15" id="zBx-tA-ReV"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="oFp-ce-Ina"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="q9Y-lC-OQY" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="ELN-uE-OhG"/>
+                <constraint firstItem="cfC-k0-9TT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="KA2-eg-E11"/>
+                <constraint firstItem="q9Y-lC-OQY" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="YBS-Rs-AgU"/>
+                <constraint firstItem="cfC-k0-9TT" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="aQA-bB-AO7"/>
+                <constraint firstItem="cfC-k0-9TT" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="b9Q-3P-en0"/>
+                <constraint firstItem="cfC-k0-9TT" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="dWn-eR-Dea"/>
+                <constraint firstItem="q9Y-lC-OQY" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="krk-em-1ap"/>
+                <constraint firstItem="q9Y-lC-OQY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="y8V-wh-sId"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+            <point key="canvasLocation" x="24.5" y="51.5"/>
+        </view>
+    </objects>
+</document>
