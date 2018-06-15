@@ -37,7 +37,19 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     BMDemoTableViewCell *cell = (BMDemoTableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"BMDemoTableViewCell" forIndexPath:indexPath];
-     cell.textLabel.text = [self classNameOfViewControllerAtIndex:indexPath.row];
+    if(indexPath.row == 0){
+        cell.textLabel.text = @"AVCaptureSession 会话的使用";
+    }else if(indexPath.row == 1){
+        cell.textLabel.text =  @"音视频录制 输出";//AVCaptureMovieFileOutput
+    }else if(indexPath.row == 2){
+        cell.textLabel.text =  @"给带音频的视频陪背景音乐";
+    }else if(indexPath.row == 3){
+        cell.textLabel.text =  @"多段视频拼接";
+    }else if(indexPath.row == 4){
+        cell.textLabel.text =  @"AVFoundation解码  不带音频";
+    }else{
+        cell.textLabel.text = [self classNameOfViewControllerAtIndex:indexPath.row];
+    }
     return cell;
 }
 

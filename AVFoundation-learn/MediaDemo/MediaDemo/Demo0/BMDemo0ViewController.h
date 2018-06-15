@@ -10,9 +10,4 @@
 
 @interface BMDemo0ViewController : UIViewController
 
-
-
-
-
-
 @end

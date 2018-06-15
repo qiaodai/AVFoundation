@@ -38,28 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
-//- (void)setup{
-//    NSString *sourcePath = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
-//    AVURLAsset *asset = [[AVURLAsset alloc]initWithURL:[NSURL fileURLWithPath:sourcePath] options:nil];
-//
-//    NSString *sourcePath2 = [[NSBundle mainBundle] pathForResource:@"1" ofType:@"mp3"];
-//    AVURLAsset *asset2 = [[AVURLAsset alloc]initWithURL:[NSURL fileURLWithPath:sourcePath2] options:nil];
-//    self.outputPath = [self outputPath];
-////    self.reader = [[AVAssetReader alloc] initWithAsset:asset error:nil];
-////    self.writer = [[AVAssetWriter alloc] initWithURL:[NSURL fileURLWithPath:self.outputPath] fileType:AVFileTypeMPEG4 error:nil];
-//
-//    AVMutableComposition *composition = [AVMutableComposition composition];
-//    AVMutableCompositionTrack *video = [composition addMutableTrackWithMediaType:AVMediaTypeVideo preferredTrackID:0];
-//    [video insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset.duration) ofTrack:[[asset tracksWithMediaType:AVMediaTypeVideo] firstObject] atTime:kCMTimeZero error:nil];
-//    AVMutableCompositionTrack *audio1 = [composition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:0];
-//    [audio1 insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset.duration) ofTrack:[[asset tracksWithMediaType:AVMediaTypeAudio] firstObject] atTime:kCMTimeZero error:nil];
-//    AVMutableCompositionTrack *audio2 = [composition addMutableTrackWithMediaType:AVMediaTypeAudio preferredTrackID:0];
-//    [audio2 insertTimeRange:CMTimeRangeMake(kCMTimeZero, asset2.duration) ofTrack:[[asset2 tracksWithMediaType:AVMediaTypeAudio] firstObject] atTime:kCMTimeZero error:nil];
-//
-//    AVAssetExportSession *session = [[AVAssetExportSession alloc]initWithAsset:composition presetName:AVAssetExportPresetAppleM4A];
-//    session.outputURL = [NSURL fileURLWithPath:self.outputPath];
-//    session.outputFileType =
-//}
+
 //抽取原视频的音频与需要的音乐混合
 -(void)addmusic:(id)sender
 {

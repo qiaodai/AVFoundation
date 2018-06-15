@@ -53,8 +53,6 @@
     self.stillImageOutput.outputSettings = @{AVVideoCodecKey : AVVideoCodecTypeJPEG};
 
 
-    
-
     //4.给Session添加input输入 一般是Video或者Audio数据,也可以两者都添加,即AVCaptureSession的输入源AVCaptureDeviceInput.
     if ([self.captureSession canAddInput:self.captureDeviceInput]){
         [self.captureSession addInput:self.captureDeviceInput];
@@ -189,14 +187,5 @@
         [self.captureDevice unlockForConfiguration];
     }
 }
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

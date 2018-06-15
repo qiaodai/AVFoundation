@@ -21,6 +21,10 @@
     self.view.backgroundColor = [UIColor blackColor];
     [self initAVAsset];
 }
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.decoder endDecode];
+}
 - (void)initAVAsset
 {
     NSString *path = [[NSBundle mainBundle] pathForResource:@"test" ofType:@"mp4"];
